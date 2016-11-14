@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Patrimoine2</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ patrimoine2.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre1</th>
+                <td>{{ patrimoine2.titre1 }}</td>
+            </tr>
+            <tr>
+                <th>Article1</th>
+                <td>{{ patrimoine2.article1 }}</td>
+            </tr>
+            <tr>
+                <th>Titre2</th>
+                <td>{{ patrimoine2.titre2 }}</td>
+            </tr>
+            <tr>
+                <th>Image1</th>
+                <td>{{ patrimoine2.image1 }}</td>
+            </tr>
+            <tr>
+                <th>Image2</th>
+                <td>{{ patrimoine2.image2 }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('patrimoine2_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('patrimoine2_edit', { 'id': patrimoine2.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

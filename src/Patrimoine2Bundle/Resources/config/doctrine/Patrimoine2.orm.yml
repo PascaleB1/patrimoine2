@@ -1,0 +1,27 @@
+Patrimoine2Bundle\Entity\Patrimoine2:
+    type: entity
+    table: null
+    repositoryClass: Patrimoine2Bundle\Repository\Patrimoine2Repository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre1:
+            type: string
+            length: 255
+        article1:
+            type: string
+            length: 255
+        titre2:
+            type: string
+            length: 255
+        image1:
+            type: string
+            length: 255
+        image2:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

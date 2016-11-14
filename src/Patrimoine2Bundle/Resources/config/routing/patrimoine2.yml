@@ -1,0 +1,24 @@
+patrimoine2_index:
+    path:     /
+    defaults: { _controller: "Patrimoine2Bundle:Patrimoine2:index" }
+    methods:  GET
+
+patrimoine2_show:
+    path:     /{id}/show
+    defaults: { _controller: "Patrimoine2Bundle:Patrimoine2:show" }
+    methods:  GET
+
+patrimoine2_new:
+    path:     /new
+    defaults: { _controller: "Patrimoine2Bundle:Patrimoine2:new" }
+    methods:  [GET, POST]
+
+patrimoine2_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "Patrimoine2Bundle:Patrimoine2:edit" }
+    methods:  [GET, POST]
+
+patrimoine2_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "Patrimoine2Bundle:Patrimoine2:delete" }
+    methods:  DELETE
