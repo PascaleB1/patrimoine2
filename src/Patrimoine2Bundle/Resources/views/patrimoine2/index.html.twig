@@ -1,47 +1,42 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Patrimoine2s list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titre1</th>
-                <th>Article1</th>
-                <th>Titre2</th>
-                <th>Image1</th>
-                <th>Image2</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
         {% for patrimoine2 in patrimoine2s %}
-            <tr>
-                <td><a href="{{ path('patrimoine2_show', { 'id': patrimoine2.id }) }}">{{ patrimoine2.id }}</a></td>
-                <td>{{ patrimoine2.titre1 }}</td>
-                <td>{{ patrimoine2.article1 }}</td>
-                <td>{{ patrimoine2.titre2 }}</td>
-                <td>{{ patrimoine2.image1 }}</td>
-                <td>{{ patrimoine2.image2 }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('patrimoine2_show', { 'id': patrimoine2.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('patrimoine2_edit', { 'id': patrimoine2.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('patrimoine2_new') }}">Create a new patrimoine2</a>
-        </li>
-    </ul>
+    <div class="container">
+    </br>
+    </br>
+    </br>
+        <div class="row">
+
+            <div class="col-xs-12">
+            <h1>{{ patrimoine2.titre1 }}</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+            <p>{{ patrimoine2.article1 }}</p>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+            <img src="{{ app.request.basepath }}/uploads/{{ patrimoine2.image1 }}" class="thumbnail img_tmp">
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-12">
+            <h1>{{ patrimoine2.titre2 }}</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+            <p>{{ patrimoine2.article2 }}</p>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+            <img src="{{ app.request.basepath }}/uploads/{{ patrimoine2.image2 }}" class="thumbnail img_tmp">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}

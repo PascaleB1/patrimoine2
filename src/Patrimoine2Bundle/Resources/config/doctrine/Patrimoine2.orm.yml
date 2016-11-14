@@ -13,15 +13,24 @@ Patrimoine2Bundle\Entity\Patrimoine2:
             type: string
             length: 255
         article1:
+            type: text
+        image1:
             type: string
-            length: 255
+            lenght: 255
         titre2:
             type: string
             length: 255
-        image1:
-            type: string
-            length: 255
+        article2:
+            type: text
         image2:
             type: string
-            length: 255
-    lifecycleCallbacks: {  }
+            lenght: 255
+
+    lifecycleCallbacks:
+
+      prePersist: [ preUpload1, preUpload2 ]
+      preUpdate: [ preUpload1, preUpload2 ]
+      postPersist: [ upload1, upload2 ]
+      postUpdate: [ upload1, upload2 ]
+      postRemove: [ removeUpload1, removeUpload2 ]
+

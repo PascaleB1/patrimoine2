@@ -1,12 +1,58 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Patrimoine2 edit</h1>
 
-    {{ form_start(edit_form) }}
+    <div class="container">
+        </br>
+        </br>
+        </br>
+        <div class="row">
+
+            <div class="col-xs-12">
+                <h1>{{ patrimoine2.titre1 }}</h1>
+                {{ form_widget(edit_form.titre1) }}
+                {{ form_errors(edit_form.titre1) }}
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <p>{{ patrimoine2.article1 }}</p>
+                {{ form_widget(edit_form.article1) }}
+                {{ form_errors(edit_form.article1) }}
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <img src="{{ app.request.basepath }}/uploads/{{ patrimoine2.image1 }}" class="thumbnail img_tmp">
+                {{ form_widget(edit_form.file1) }}
+                {{ form_errors(edit_form.file1) }}
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-12">
+                <h1>{{ patrimoine2.titre2 }}</h1>
+                {{ form_widget(edit_form.titre2) }}
+                {{ form_errors(edit_form.titre2) }}
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <p>{{ patrimoine2.article2 }}</p>
+                {{ form_widget(edit_form.article2) }}
+                {{ form_errors(edit_form.article2) }}
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <img src="{{ app.request.basepath }}/uploads/{{ patrimoine2.image2 }}" class="thumbnail img_tmp">
+                {{ form_widget(edit_form.file2) }}
+                {{ form_errors(edit_form.file2) }}
+            </div>
+        </div>
+    </div>
+
+
         {{ form_widget(edit_form) }}
         <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+
 
     <ul>
         <li>
@@ -18,4 +64,6 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
+
+    {{ form_end(edit_form) }}
 {% endblock %}
