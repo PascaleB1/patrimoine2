@@ -6,7 +6,7 @@
         </br>
         </br>
         </br>
-        <div class="row">
+        <div class="row fond">
 
             <div class="col-xs-12">
                 <h1>{{ patrimoine2.titre1 }}</h1>
@@ -26,8 +26,8 @@
                 {{ form_errors(edit_form.file1) }}
             </div>
         </div>
-
-        <div class="row">
+        </br>
+        <div class="row fond">
 
             <div class="col-xs-12">
                 <h1>{{ patrimoine2.titre2 }}</h1>
@@ -48,22 +48,10 @@
             </div>
         </div>
     </div>
-
+        </br>
 
         {{ form_widget(edit_form) }}
         <input type="submit" value="Edit" />
-
-
-    <ul>
-        <li>
-            <a href="{{ path('patrimoine2_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
 
     {{ form_end(edit_form) }}
 {% endblock %}

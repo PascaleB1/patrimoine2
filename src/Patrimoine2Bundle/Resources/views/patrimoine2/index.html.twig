@@ -8,7 +8,7 @@
     </br>
     </br>
     </br>
-        <div class="row">
+        <div class="row fond">
 
             <div class="col-xs-12">
             <h1>{{ patrimoine2.titre1 }}</h1>
@@ -22,8 +22,8 @@
             <img src="{{ app.request.basepath }}/uploads/{{ patrimoine2.image1 }}" class="thumbnail img_tmp">
             </div>
         </div>
-
-        <div class="row">
+    </br>
+        <div class="row fond">
 
             <div class="col-xs-12">
             <h1>{{ patrimoine2.titre2 }}</h1>
@@ -37,6 +37,7 @@
             <img src="{{ app.request.basepath }}/uploads/{{ patrimoine2.image2 }}" class="thumbnail img_tmp">
             </div>
         </div>
+    </br>
         {% endfor %}
     </div>
 {% endblock %}

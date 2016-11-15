@@ -22,45 +22,37 @@
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                            aria-expanded="false" aria-controls="navbar"><span class="sr-only"></span> <span
-                                class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-                    </button>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li>Accueil</li>
-                        <li>Les associations</li>
-                        <li>Nos réalisations</li>
-                        <li>L'agenda</li>
-                        <li>Devenir mécène</li>
+                        <li><a href="">Accueil</a></li>
+                        <li class="active"><a href="">Les associations</a></li>
+                        <li><a href="">Nos réalisations</a></li>
+                        <li><a href="">L'agenda</a></li>
+                        <li><a href="">Devenir mécène</a></li>
                     </ul>
                 </div>
-                <!--/.nav-collapse -->
             </div>
         </nav>
+
     {% endblock %}
 
         {% block body %}
         {% endblock %}
 
-        <footer>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <p id="float_right">Site réalisé par </p>
-                    </div>
-
-                    <div class="col-xs-4">
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                    <div class="col-xs-6">
                         <a class="btn btn-primary text-center" role="button" data-toggle="modal" data-target="#myModal"><img
                                     src="{{ asset('bundles/patrimoine2/img/WCS-logo.png') }}" alt="log_WCS"/></a>
                     </div>
+                    <div class="col-xs-6">
+                    <a href=".bs-example-modal-lg" data-toggle="modal" data-target=".bs-example-modal-lg">Mentions Légales</a>
+                    </div>
 
-
-
-                    <!-- Large modal -->
-                    <a href=".bs-example-modal-lg" data-toggle="modal" data-target=".bs-example-modal-lg">Mentions
-                        Légales</a>
+                    <!-- MODALE MENTIONS LEGALES -->
 
                     <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
                          aria-labelledby="myLargeModalLabel">
@@ -107,23 +99,17 @@
                                         intégrante du présent site web. Le site et l'ensemble de son contenu sont
                                         soumis au droit français et tout litige éventuel s'y rapportant sera soumis
                                         à la compétence des tribunaux français.</p>
-                                    <button type="button" class="btn btn-default btn_fermer" data-dismiss="modal">
-                                        Fermer
-                                    </button>
+                                    <button type="button" class="btn btn-default btn_fermer" data-dismiss="modal">Fermer</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                </div>
+            </div>
+        </div>
                 <!-- Modal -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                            aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Site réalisé par:</h4></div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="col-xs-4"><a class="btn btn-default"
@@ -146,6 +132,9 @@
                                 </div>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
                             </div>
+                </div>
+            </div>
+        </div>
         </footer>
 
         {% block javascripts %}

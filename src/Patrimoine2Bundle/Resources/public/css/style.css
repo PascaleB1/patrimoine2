@@ -1,10 +1,77 @@
-.container
-{
-    background-color: #F0FFF0;
+body{
+    background-color: #F8F8FF;
 }
 
-.row
+h1 {
+    font-family: Verdana, serif;
+    font-size: x-large;
+}
+
+/*couleur de fond des row*/
+
+.fond
 {
     background-color: #DCDCDC;
-    border-radius: 5%;
+    border-radius: 20px;
 }
+
+/*NAVBAR*/
+
+.navbar {
+    background-color: #6E7A7F;
+}
+
+.navbar-inverse .navbar-nav > li:hover > a:hover{
+    background-color: #A2A8A7;
+    border-radius: 4px;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    background-color: #A2A8A7;
+    border-radius: 4px;
+
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+    margin: 0px 25px;
+
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+    margin: 0px 25px;
+}
+/*fin de NAVBAR*/
+
+/*FOOTER*/
+footer {
+    height: auto;
+    background-color: #3E3A3A;
+    color: #FFFFFF;
+    line-height: 50px;
+}
+
+footer .col-xs-6 {
+    text-align: center;
+}
+
+.modal_mention {
+    color: #000000;
+    text-align: center;
+}
+
+footer a {
+    color: inherit;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer .btn-primary {
+    background-color: inherit;
+    border-color: #3E3A3A;
+}
+/*fin de FOOTER*/
